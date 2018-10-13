@@ -4,13 +4,18 @@ using System.Threading;
 
 namespace EPAM.Core.ReportHelper.Tests
 {
+    using System.Diagnostics;
+
     [TestClass]
     public class ReportNameHelperTests
     {
         [AssemblyInitialize]
         public static void Init(TestContext context)
         {
-            Thread.Sleep(30 * 1000);
+            while (!Debugger.IsAttached)
+            {
+                
+            }
         }
 
         [TestMethod]
